@@ -1,0 +1,48 @@
+<html> 
+<body>
+<form>
+    <input type="button" id="btn" value="Load images" />
+    <input type="text" id="batches" value=""/>
+</form>
+    <script type="text/javascript">
+        document.getElementById('btn').onclick = function() {
+            var pictures = [
+                "http://www.newton.ac.uk/files/covers/968361.jpg",
+                "http://zoarchurch.co.uk/content/pages/uploaded_images/91.png",
+                "https://s3-ap-southeast-1.amazonaws.com/expin/community/550e15686481272aad000023/M9a0doEXcgojevVuk38n.jpg",
+                "http://cdn.phys.org/newman/gfx/news/hires/2013/takingtheran.jpg",
+                "http://nathaningram.com/wp-content/uploads/2011/12/random-image1.jpg",
+                "http://randomrab.com/wp-content/uploads/2015/05/thumpimage.jpg",
+                "http://britfa.gs/b/src/142255689422.jpg",
+                "http://imgs.xkcd.com/comics/ayn_random.png",
+                "http://images.amcnetworks.com/ifc.com/wp-content/uploads/2011/10/joe-son-random-task-10122011.jpg",
+                "http://www.randomwebsite.com/images/head.jpg",
+            ];
+            var batches = document.getElementById('batches').value;
+            var total = batches > 0 ? batches : 1;
+            var loaded = 0;
+            var imagesToAppend = new Array(total);
+
+            var img;
+            for(i = 0; i < pictures.length; i++) {
+                img = new Image();
+
+                img.onload = function() {
+                    done(this); 
+                }
+                img.src = pictures[i]; 
+            }
+
+            function done(fn) {
+                imagesToAppend[loaded++] = fn;
+                if(loaded >= total) {
+                    for(i = 0; i < loaded; i++) {
+                        document.body.appendChild(imagesToAppend[i]);
+                    }
+                    loaded=0;
+                }
+            }            
+        }
+    </script>
+</body>
+</html>

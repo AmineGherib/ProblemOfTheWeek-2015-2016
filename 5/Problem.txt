@@ -1,0 +1,11 @@
+2015 Week 5 - Da ASCII Food Chain (Solved by: 8 Students (23.53% of total))
+
+Now that Amine's position at the top of the food chain has been restored he is brain storming new ways of showing it off. 
+
+His latest idea is to generate an ASCII graph depicting his dominance. He has talked to Quinn and got him to expose an API for pulling problem of the week scores. Much to William's discontent, Quinn has created a JSON RESTful API. The live JSON data is available at potw.quinnftw.com/api/solvers.
+
+Help Amine brag and create a cool way to display this data (ASCII art is not only acceptable but preferred). 
+
+How you choose to display the data is up to you, but you MUST use the API provided. 
+
+HTML submissions are also okay, I can serve them locally.

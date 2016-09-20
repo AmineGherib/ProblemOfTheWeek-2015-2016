@@ -1,0 +1,177 @@
+==24778== Memcheck, a memory error detector
+==24778== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==24778== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==24778== Command: ./example1
+==24778== Parent PID: 23343
+==24778== 
+--24778-- 
+--24778-- Valgrind options:
+--24778--    --leak-check=full
+--24778--    --log-file=log.txt
+--24778--    -v
+--24778-- Output from sysctl({CTL_KERN,KERN_VERSION}):
+--24778--   Darwin Kernel Version 15.2.0: Fri Nov 13 19:56:56 PST 2015; root:xnu-3248.20.55~2/RELEASE_X86_64
+--24778-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-sse3
+--24778-- Page sizes: currently 4096, max supported 4096
+--24778-- Valgrind library directory: /usr/local/Cellar/valgrind/3.11.0/lib/valgrind
+--24778-- ./example1 (rx at 0x100000000, rw at 0x100001000)
+--24778--    reading syms   from primary file (8 0)
+--24778--    dSYM= ./example1.dSYM/Contents/Resources/DWARF/example1
+--24778-- /usr/lib/dyld (rx at 0x7fff5fc00000, rw at 0x7fff5fc37000)
+--24778--    reading syms   from primary file (6 1226)
+--24778-- Scheduler: using generic scheduler lock implementation.
+--24778-- Reading suppressions file: /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp
+==24778== embedded gdbserver: reading from /var/folders/l5/bfws4mfd26l4rczpc9d6x82c0000gq/T//vgdb-pipe-from-vgdb-to-24778-by-amine-on-???
+==24778== embedded gdbserver: writing to   /var/folders/l5/bfws4mfd26l4rczpc9d6x82c0000gq/T//vgdb-pipe-to-vgdb-from-24778-by-amine-on-???
+==24778== embedded gdbserver: shared mem   /var/folders/l5/bfws4mfd26l4rczpc9d6x82c0000gq/T//vgdb-pipe-shared-mem-vgdb-24778-by-amine-on-???
+==24778== 
+==24778== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==24778== don't want to do, unless you know exactly what you're doing,
+==24778== or are doing some strange experiment):
+==24778==   /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/../../bin/vgdb --pid=24778 ...command...
+==24778== 
+==24778== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==24778==   /path/to/gdb ./example1
+==24778== and then give GDB the following command
+==24778==   target remote | /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/../../bin/vgdb --pid=24778
+==24778== --pid is optional if only one valgrind process is running
+==24778== 
+--24778-- REDIR: 0x7fff5fc1e5b9 (dyld:arc4random) redirected to 0x23805ba1f (???)
+--24778-- REDIR: 0x7fff5fc24780 (dyld:strcmp) redirected to 0x23805b981 (???)
+--24778-- REDIR: 0x7fff5fc1e380 (dyld:strlen) redirected to 0x23805b950 (???)
+--24778-- REDIR: 0x7fff5fc1e2e0 (dyld:strcpy) redirected to 0x23805b99d (???)
+--24778-- REDIR: 0x7fff5fc21cdf (dyld:strcat) redirected to 0x23805b961 (???)
+--24778-- REDIR: 0x7fff5fc21d1f (dyld:strlcat) redirected to 0x23805b9ba (???)
+--24778-- /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/vgpreload_core-amd64-darwin.so (rx at 0x100003000, rw at 0x100005000)
+--24778--    reading syms   from primary file (3 21)
+--24778--    dSYM= /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/vgpreload_core-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_core-amd64-darwin.so
+--24778-- /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so (rx at 0x100007000, rw at 0x10000d000)
+--24778--    reading syms   from primary file (72 29)
+--24778--    dSYM= /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_memcheck-amd64-darwin.so
+--24778-- /usr/lib/libSystem.B.dylib (rx at 0x100010000, rw at 0x100012000)
+--24778--    reading syms   from primary file (31 5)
+--24778-- /usr/lib/system/libcache.dylib (rx at 0x100017000, rw at 0x10001c000)
+--24778--    reading syms   from primary file (32 30)
+--24778-- /usr/lib/system/libcommonCrypto.dylib (rx at 0x100021000, rw at 0x10002d000)
+--24778--    reading syms   from primary file (214 188)
+--24778-- /usr/lib/system/libcompiler_rt.dylib (rx at 0x10003a000, rw at 0x100042000)
+--24778--    reading syms   from primary file (510 8)
+--24778-- /usr/lib/system/libcopyfile.dylib (rx at 0x10004f000, rw at 0x100058000)
+--24778--    reading syms   from primary file (13 35)
+--24778-- /usr/lib/system/libcorecrypto.dylib (rx at 0x10005e000, rw at 0x1000d6000)
+--24778--    reading syms   from primary file (430 601)
+--24778-- /usr/lib/system/libdispatch.dylib (rx at 0x1000ee000, rw at 0x10011c000)
+--24778--    reading syms   from primary file (215 832)
+--24778-- /usr/lib/system/libdyld.dylib (rx at 0x100145000, rw at 0x100149000)
+--24778--    reading syms   from primary file (80 109)
+--24778-- /usr/lib/system/libkeymgr.dylib (rx at 0x100150000, rw at 0x100151000)
+--24778--    reading syms   from primary file (12 3)
+--24778-- /usr/lib/system/libmacho.dylib (rx at 0x10015c000, rw at 0x100162000)
+--24778--    reading syms   from primary file (97 1)
+--24778-- /usr/lib/system/libquarantine.dylib (rx at 0x100168000, rw at 0x10016b000)
+--24778--    reading syms   from primary file (67 32)
+--24778-- /usr/lib/system/libremovefile.dylib (rx at 0x100171000, rw at 0x100173000)
+--24778--    reading syms   from primary file (15 4)
+--24778-- /usr/lib/system/libsystem_asl.dylib (rx at 0x100178000, rw at 0x100190000)
+--24778--    reading syms   from primary file (222 225)
+--24778-- /usr/lib/system/libsystem_blocks.dylib (rx at 0x10019d000, rw at 0x10019f000)
+--24778--    reading syms   from primary file (25 22)
+--24778-- /usr/lib/system/libsystem_c.dylib (rx at 0x1001a3000, rw at 0x100231000)
+--24778--    reading syms   from primary file (1303 748)
+--24778-- /usr/lib/system/libsystem_configuration.dylib (rx at 0x10025c000, rw at 0x10025f000)
+--24778--    reading syms   from primary file (28 57)
+--24778-- /usr/lib/system/libsystem_coreservices.dylib (rx at 0x100265000, rw at 0x100268000)
+--24778--    reading syms   from primary file (13 30)
+--24778-- /usr/lib/system/libsystem_coretls.dylib (rx at 0x10026d000, rw at 0x100284000)
+--24778--    reading syms   from primary file (118 257)
+--24778-- /usr/lib/system/libsystem_dnssd.dylib (rx at 0x10028f000, rw at 0x100298000)
+--24778--    reading syms   from primary file (68 33)
+--24778-- /usr/lib/system/libsystem_info.dylib (rx at 0x10029e000, rw at 0x1002c8000)
+--24778--    reading syms   from primary file (526 527)
+--24778-- /usr/lib/system/libsystem_kernel.dylib (rx at 0x1002dd000, rw at 0x1002fc000)
+--24778--    reading syms   from primary file (1054 83)
+--24778-- /usr/lib/system/libsystem_m.dylib (rx at 0x100311000, rw at 0x100341000)
+--24778--    reading syms   from primary file (593 1)
+--24778-- /usr/lib/system/libsystem_malloc.dylib (rx at 0x10034d000, rw at 0x10036a000)
+--24778--    reading syms   from primary file (102 201)
+--24778-- /usr/lib/system/libsystem_network.dylib (rx at 0x100373000, rw at 0x1003d5000)
+--24778--    reading syms   from primary file (672 1972)
+--24778-- /usr/lib/system/libsystem_networkextension.dylib (rx at 0x10040b000, rw at 0x100414000)
+--24778--    reading syms   from primary file (82 235)
+--24778-- /usr/lib/system/libsystem_notify.dylib (rx at 0x10041f000, rw at 0x100429000)
+--24778--    reading syms   from primary file (136 53)
+--24778-- /usr/lib/system/libsystem_platform.dylib (rx at 0x100431000, rw at 0x10043a000)
+--24778--    reading syms   from primary file (142 158)
+--24778-- /usr/lib/system/libsystem_pthread.dylib (rx at 0x100442000, rw at 0x10044c000)
+--24778--    reading syms   from primary file (163 70)
+--24778-- /usr/lib/system/libsystem_sandbox.dylib (rx at 0x100459000, rw at 0x10045d000)
+--24778--    reading syms   from primary file (79 7)
+--24778-- /usr/lib/system/libsystem_secinit.dylib (rx at 0x100463000, rw at 0x100465000)
+--24778--    reading syms   from primary file (3 6)
+--24778-- /usr/lib/system/libsystem_trace.dylib (rx at 0x10046a000, rw at 0x10047c000)
+--24778--    reading syms   from primary file (94 351)
+--24778-- /usr/lib/system/libunwind.dylib (rx at 0x10048e000, rw at 0x100494000)
+--24778--    reading syms   from primary file (102 52)
+--24778-- /usr/lib/system/libxpc.dylib (rx at 0x10049b000, rw at 0x1004c5000)
+--24778--    reading syms   from primary file (503 833)
+--24778-- /usr/lib/libobjc.A.dylib (rx at 0x1004e3000, rw at 0x10084f000)
+--24778--    reading syms   from primary file (347 935)
+--24778-- /usr/lib/libauto.dylib (rx at 0x10092f000, rw at 0x100976000)
+--24778--    reading syms   from primary file (68 658)
+--24778-- /usr/lib/libc++abi.dylib (rx at 0x10098b000, rw at 0x1009b5000)
+--24778--    reading syms   from primary file (337 181)
+--24778-- /usr/lib/libc++.1.dylib (rx at 0x1009c3000, rw at 0x100a17000)
+--24778--    reading syms   from primary file (1960 1590)
+--24778-- /usr/lib/libDiagnosticMessagesClient.dylib (rx at 0x100a73000, rw at 0x100a75000)
+--24778--    reading syms   from primary file (21 14)
+--24778-- REDIR: 0x100431ae0 (libsystem_platform.dylib:_platform_memchr$VARIANT$Generic) redirected to 0x10000ab45 (_platform_memchr$VARIANT$Generic)
+--24778-- REDIR: 0x100431ca0 (libsystem_platform.dylib:_platform_memcmp) redirected to 0x10000b0af (_platform_memcmp)
+--24778-- REDIR: 0x100432520 (libsystem_platform.dylib:_platform_strncmp) redirected to 0x10000aa25 (_platform_strncmp)
+--24778-- REDIR: 0x10034e0b2 (libsystem_malloc.dylib:malloc) redirected to 0x100008e3a (malloc)
+--24778-- REDIR: 0x1001a4140 (libsystem_c.dylib:strlen) redirected to 0x10000a6b4 (strlen)
+--24778-- REDIR: 0x100432b00 (libsystem_platform.dylib:_platform_strcmp) redirected to 0x10000aac5 (_platform_strcmp)
+--24778-- REDIR: 0x100350ec7 (libsystem_malloc.dylib:free) redirected to 0x10000927a (free)
+--24778-- REDIR: 0x100353328 (libsystem_malloc.dylib:calloc) redirected to 0x1000094f2 (calloc)
+--24778-- REDIR: 0x100350ea8 (libsystem_malloc.dylib:malloc_default_zone) redirected to 0x10000a2a4 (malloc_default_zone)
+--24778-- REDIR: 0x10034f56a (libsystem_malloc.dylib:malloc_zone_malloc) redirected to 0x1000090ee (malloc_zone_malloc)
+--24778-- REDIR: 0x100352969 (libsystem_malloc.dylib:malloc_zone_calloc) redirected to 0x1000096f4 (malloc_zone_calloc)
+--24778-- REDIR: 0x100352a22 (libsystem_malloc.dylib:malloc_zone_from_ptr) redirected to 0x10000a2e5 (malloc_zone_from_ptr)
+--24778-- REDIR: 0x100432680 (libsystem_platform.dylib:_platform_strchr$VARIANT$Generic) redirected to 0x10000a54d (_platform_strchr$VARIANT$Generic)
+--24778-- REDIR: 0x100355e33 (libsystem_malloc.dylib:realloc) redirected to 0x100009896 (realloc)
+--24778-- REDIR: 0x100353e67 (libsystem_malloc.dylib:malloc_zone_memalign) redirected to 0x100009e3c (malloc_zone_memalign)
+==24778== 
+==24778== HEAP SUMMARY:
+==24778==     in use at exit: 22,240 bytes in 186 blocks
+==24778==   total heap usage: 273 allocs, 87 frees, 28,560 bytes allocated
+==24778== 
+==24778== Searching for pointers to 186 not-freed blocks
+==24778== Checked 9,814,480 bytes
+==24778== 
+==24778== 8 bytes in 1 blocks are definitely lost in loss record 2 of 64
+==24778==    at 0x100008EBB: malloc (in /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==24778==    by 0x100000CF3: tree_init (in ./example1)
+==24778==    by 0x100000F03: main (in ./example1)
+==24778== 
+==24778== LEAK SUMMARY:
+==24778==    definitely lost: 8 bytes in 1 blocks
+==24778==    indirectly lost: 0 bytes in 0 blocks
+==24778==      possibly lost: 0 bytes in 0 blocks
+==24778==    still reachable: 0 bytes in 0 blocks
+==24778==         suppressed: 22,232 bytes in 185 blocks
+==24778== 
+==24778== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 18 from 18)
+--24778-- 
+--24778-- used_suppression:      1 OSX1011:21-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:944 suppressed: 4,096 bytes in 1 blocks
+--24778-- used_suppression:     11 OSX1011:5-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:787 suppressed: 3,408 bytes in 56 blocks
+--24778-- used_suppression:      3 OSX1011:16-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:897 suppressed: 2,816 bytes in 44 blocks
+--24778-- used_suppression:      2 OSX1011:4-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:778 suppressed: 4,152 bytes in 2 blocks
+--24778-- used_suppression:      4 OSX1011:19-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:924 suppressed: 3,656 bytes in 4 blocks
+--24778-- used_suppression:      3 OSX1011:18-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:915 suppressed: 2,064 bytes in 3 blocks
+--24778-- used_suppression:     19 OSX1011:10-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:839 suppressed: 2,728 bytes in 41 blocks
+--24778-- used_suppression:      2 OSX1011:8-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:819 suppressed: 520 bytes in 2 blocks
+--24778-- used_suppression:      7 OSX1011:7-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:808 suppressed: 576 bytes in 18 blocks
+--24778-- used_suppression:      2 OSX1011:20-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:934 suppressed: 224 bytes in 5 blocks
+--24778-- used_suppression:      8 OSX1011:6-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:797 suppressed: 248 bytes in 8 blocks
+--24778-- used_suppression:      1 OSX1011:17-Leak /usr/local/Cellar/valgrind/3.11.0/lib/valgrind/default.supp:906 suppressed: 32 bytes in 1 blocks
+==24778== 
+==24778== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 18 from 18)

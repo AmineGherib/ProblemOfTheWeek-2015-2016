@@ -1,0 +1,16 @@
+2015 Week 2 - Calculating Coolness (Solved by: 14 Students (41.18% of total))
+
+Quinn is a pretty popular, and extremely modest guy. Other students measure their popularity in a unit called QDist. 
+
+One can calculate their QDist value by finding the degrees of separation between their self and Quinn. For example:
+If Quinn is friends with Dave, and Dave is friends with Travis, then Dave's QDist value is 1, and Travis is 2. 
+
+Given a list of friendships, list each person and their QDist value in alphabetical order. 
+
+Input: 
+an integer n denoting the number of friendships to follow
+n friendships of the form name1 name2 denoting that name1 is friends with name2 (and vice versa, friendship is a bidirectional relation)
+
+Output: 
+name QDist for each person entered ordered alphabetically by name. 
+In the event that a person is not connected to Quinn in anyway, output name uncool

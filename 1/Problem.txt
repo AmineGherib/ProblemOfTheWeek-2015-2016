@@ -1,0 +1,16 @@
+2015 Week 1 - Looking for Love (Solved by: 12 Students (35.29% of total))
+
+Will has been feeling pretty lonely lately. In order to help himself he creates a dating website. Being a computer scientist, he comes up with an interesting way of computing how well one person would match with another. 
+
+Based on the information entered, Will creates a 32 bit unsigned integer which acts as a mask for the person's data. In order to compute compatibility between a couple Will checks how many similar bits they have. The more similarity the better the match. One also has to keep in mind though, opposites attract. 
+
+Your goal is to design an algorithm that displays the couple with the highest compatibility level, and the lowest compatibility level. 
+
+Input: 
+An integer N denoting the number of people registered on Will's dating site 
+N string integer pairs of the form: 
+name int 
+Meaning that name's value is int 
+
+Output: 
+Two pairs of strings separated by a new line, the first being the names of the couple with the highest similarity level, and the second being the names of the couple with the lowest similarity level

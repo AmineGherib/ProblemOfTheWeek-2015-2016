@@ -1,0 +1,16 @@
+2015 Week 6 - Margare_t (Solved by: 7 Students (20.59% of total))
+
+Margaret has picked up quite a few things over the years of listening to the Computer Science nerds communicate. One thing she has been interested in recently are scheduling algorithms.
+
+Margaret has a bunch of events to plan for, and these events have a logical ordering. For example, the meeting to vote on the new 140 professor must be scheduled before the meeting announcing who will be filling the position (fingers crossed). She has a list of events, each having a (possibly empty) set of prerequisites, but is having problem making sense of it and coming up with an ordering. 
+
+Input: 
+- An integer n 
+- n lines of the format event1 event2 (you can assume event names do not contain spaces), denoting that event1 must occur before event2
+
+Output: 
+A space separated list of event names which represents a suggested ordering. The events in the sequence must be ordered such that for any event e in the sequence all of e's prerequisite events appear before it in the sequence. 
+
+If more than one possible ordering exists simply output one. 
+
+You may assume that all events are connected in some way, and no circular dependencies exist. 

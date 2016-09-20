@@ -1,0 +1,13 @@
+2015 Week 3 - Lets eat grandpa (Solved by: 15 Students (44.12% of total))
+
+The trusty sys admin Mac Miller dropped the ball (literally). He was carrying a server for the english department and accidentally dropped it. Most of the data is ok, but it seems like the fall erased all punctuation from a few essays. The english students need help! 
+
+Given a dictionary of m words followed by n sentences, determine whether spaces can be added to each sentence such that all words created appear in the given dictionary. 
+
+Input: 
+An integer m followed by m new line separated words 
+An integer n followed by n new line separated sentences containing no spaces or punctuation. 
+
+Output: 
+If the given sentence can be partitioned such that all words created are valid output 1. 
+Otherwise output 0.

@@ -1,0 +1,17 @@
+2015 Week 4 - Farmer Kelly Solved by: 12 Students (35.29% of total)
+
+Matt has decided to finally throw in the proverbial Computer Science towel and pursue his true dream of being a farmer. 
+
+Matt purchases a large plot of land and fills it with tomatoes in a grid-like fashion. Matt being Matt grows tired of having to walk the entire field to harvest the fruits of his labour, so he gets clever. 
+
+Matt's goal is to only farm the rectangle of land which will yield the most profit. To do this he collects statistical data for each space where a tomato can be planted. Some squares have bad soil and so they produce a negative yield (as time must be taken to dig up the dead plant and recultivate that land). 
+
+Since Matt is no longer in touch with his programmer side, he needs our help to design an algorithm to find the grid of land which produces the maximum yield. 
+
+Input: 
+Two integers n and m representing the number of rows and columns (respectively) of Matt's field. 
+
+n * m integers representing the statistical yield of each square of land (remember this can be negative) 
+
+Output: 
+Two zero indexed points (assuming the origin of the field is the top left) representing the upper left and lower right corners (respectively) of the grid Matt should harvest, followed by the yield value obtained by farming this area. See example output for formatting rules. 
