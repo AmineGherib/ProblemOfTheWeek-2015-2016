@@ -1,0 +1,5 @@
+SELECT * FROM users
+WHERE username='Top Of The Food Chain'
+OR 1=1
+
+pass: Qg)E]4;vBn,rWF(N
